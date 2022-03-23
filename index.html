@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART SHOP | Ứng dụng mua bán điện thoại, laptop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="container">
+        <div class="header">
+            <div class="logo-shop">
+                <div class="shop-name">
+                    <h2 class="animate__animated animate__bounceInDown">SMART</h2>
+                </div>
+                <div class="shop-name1">
+                    <label for="#show-product">
+                        <h2 class="animate__animated animate__bounceInDown">SHOP</h2>
+                    </label>
+                </div>
+                <h4 class="slogan-shop">THIÊN ĐƯỜNG MUA SẮM</h4>
+            </div>
+            <div class="search-login">
+                <div>
+                    <label for="search">
+                        <input type="text" id="search" placeholder="Tìm kiếm sản phẩm">
+                        <span><i class="fas fa-search logo-search" onclick="showSearch()"></i> </span>
+                    </label>
+                </div>
+                <span><i class="fas fa-phone-alt phone"></i></span>
+                <div class="support">
+                    <div>
+                        <div>
+                            <p>Tư vấn hỗ trợ</p>
+                        </div>
+                        <div class="sdt-login">
+                            <a href="#">19006750</a>
+                        </div>
+                    </div>
+                </div>
+                <span><i class="fas fa-user-circle user"></i></i></span>
+                <div class="support">
+                    <div>
+                        <div>
+                            <p>Xin chào</p>
+                        </div>
+                        <div class="sdt-login login">
+                            <a href="#">Đăng nhập</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart">
+                <div class="heart-bag">
+                    <span><a title="Giỏ hàng"><i class="fas fa-shopping-bag icon" onclick="showCart()"></i></a></span>
+                    <span><a title="Sản phẩm yêu thích"><i class="fas fa-heart icon"
+                                onclick="showFavouriteProduct()"></i></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu  -->
+    <div class="menu">
+        <div class="list-product">
+            <div>
+                <span><i class="fas fa-bars products"></i></span>
+                <span class="products">Danh mục sản phẩm</span>
+                <div class="sub-menu">
+                    <ul>
+                        <li title="Điện thoại" for="#show-smartphone"><a><img src="source/icon1.jpg" alt="" id="icon1">
+                                Điện thoại</a></li>
+                        <li title="Laptop" id="laptop"><a><img src="source/icon2.jpg" alt="" id="icon2"> Laptop</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="list-menu">
+            <a href="index.html" class="link">Trang chủ</a>
+            <a href="#" class="link">Giới thiệu</a>
+            <a href="#" class="link">Sản phẩm</a>
+            <a href="#" class="link">Tin mới nhất</a>
+            <a href="#" class="link">Câu hỏi thường gặp</a>
+            <a href="#" class="link">Tuyển dụng</a>
+            <a href="#" class="link">Liên hệ</a>
+        </div>
+    </div>
+
+    <!-- Banner  -->
+    <div class="banner">
+        <img src="https://bizweb.dktcdn.net/100/429/689/themes/841362/assets/slider_1.jpg?1646907197259" alt="banner">
+
+    </div>
+    <!-- <div class="scroll-bar"> 
+            <span></span>
+    </div> -->
+
+    <!-- Add Product -->
+    <div id="add-product">
+        <h2 class="title">Thêm sản phẩm</h2>
+        <table class="add-product">
+            <tr>
+                <td>
+                    <label for="name-product" class="name-img-price">Loại sản phẩm</label>
+                    <select id="type-product" class="input-name-img-price type-price">
+                        <option value="điện thoại">Điện thoại</option>
+                        <option value="laptop">Laptop</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="name-product" class="name-img-price">Tên sản phẩm</label>
+                    <input type="text" id="name-product" class="input-name-img-price">
+                </td>
+                <td>
+                    <label for="img-product" class="name-img-price">Ảnh minh hoạ</label>
+                    <input type="url" id="img-product" multiple="image" class="input-name-img-price">
+                </td>
+                <td>
+                    <label for="img-product" class="name-img-price">Số lượng</label>
+                    <input type="number" id="amount-product" min=0 multiple="image" class="amount" oninput="this.value = 
+                         !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
+
+                </td>
+                <td>
+                    <label for="price-product" class="name-img-price">Giá</label>
+                    <input type="text" id="price-product" class="input-name-img-price type-price">
+                </td>
+                <td>
+                    <button type="button" class="btn-add" name="addProduct" id="add-Product">Add</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- Show Smartphone  -->
+    <div id="show-smartphone">
+        <h2 class="title">Điện thoại</h2>
+        <table class="show-smartphone" border="1">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Ảnh minh hoạ</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <!-- Show Laptop  -->
+    <div id="show-laptop">
+        <h2 class="title">Laptop</h2>
+        <table class="show-laptop" border="1">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Ảnh minh hoạ</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <!-- Seach Product -->
+    <div id="show-search">
+        <h2 class="title">Danh sách kết quả tìm kiếm</h2>
+        <table class="search-product" border="1">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Ảnh minh hoạ</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <!-- Show Product -->
+    <div id="show-product">
+        <h2 class="title">Danh mục sản phẩm</h2>
+        <table class="show-product" border="1">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Ảnh minh hoạ</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <!-- Show Favorites List -->
+    <div id="show-favorite-product">
+        <div class="container1">
+            <h2 class="title">DANH SÁCH YÊU THÍCH CỦA TÔI</h2>
+            <div class="border"></div>
+        </div>
+        <div>
+            <table class="show-favorite-product" border="1">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Ảnh minh hoạ</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="show-cart">
+        <div class="container1">
+            <h2 class="title">GIỎ HÀNG CỦA BẠN</h2>
+            <div class="border"></div>
+        </div>
+        <div id="showCart">
+            <div id="show-cart1">
+                <table class="show-cart" border="1">
+                    <thead>
+                        <th>STT</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Ảnh minh hoạ</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                        <th>Hành động</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot id="tfoot">
+                    </tfoot>
+                </table>
+            </div>
+            <div class="wrap">
+                <div class="pay">
+                    <div>Thanh toán</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
