@@ -352,7 +352,7 @@ const checkStatusBeforeRemove = (arr, index) => {
     if (indexOfArr1) {
         favouriteProducts.splice(indexOfArr1, 1);
     }
-};
+};    
 
 const removeProduct = (index, name) => {
     let confirm = window.confirm("Bạn có chắc muốn xoá sản phẩm này không?")
@@ -360,7 +360,7 @@ const removeProduct = (index, name) => {
         if (name == 'show-product') {
             checkStatusBeforeRemove(products, index);
             products.splice(index, 1);
-            showProduct();
+            showProduct();     
         } else if (name == 'search-product') {
             checkStatusBeforeRemove(searchProducts, index);
             findAndRemove(searchProducts[index].name);
