@@ -1,4 +1,9 @@
 # Case Study Mouule 1 
-## Đề tài: 
+# Link tham khảo: https://pocomart.mysapo.net/
+## Đề tài: Ứng dụng quản lý sản phẩm
 
-### Mô tả:
+### Mô tả:- Trang quản lý sản phẩm với các chức năng sửa, xoá, thêm, 
+### tìm kiếm sản phẩm, danh sách yêu thích, giỏ hàng.
+
+
+

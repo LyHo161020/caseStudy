@@ -17,7 +17,6 @@ document.getElementById("add-Product").addEventListener('click', () => {
     let image = document.getElementById("img-product").value;
     let amount = document.getElementById("amount-product").value;
     let price = document.getElementById("price-product").value;
-    if (amount <= 0)
         price = addCharactor(price + "₫");
     let type = document.getElementById("type-product").value;
     product.type = type;
@@ -64,6 +63,7 @@ document.querySelector("#laptop").addEventListener('click', showLaptop = () => {
             }
         }
         show(laptop, `show-laptop`);
+        // document.getElementById('show-laptop').scrollIntoView();
 });
 
 const init = () => {
