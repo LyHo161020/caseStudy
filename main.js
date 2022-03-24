@@ -355,7 +355,7 @@ const checkStatusBeforeRemove = (arr, index) => {
 };
 
 const removeProduct = (index, name) => {
-    let confirm = window.confirm("bạn có chắc muốn xoá!")
+    let confirm = window.confirm("Bạn có chắc muốn xoá sản phẩm này không?")
     if (confirm) {
         if (name == 'show-product') {
             checkStatusBeforeRemove(products, index);
